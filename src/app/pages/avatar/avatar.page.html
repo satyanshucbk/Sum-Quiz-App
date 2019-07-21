@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-button float-left (click)="goBackStart()" color="tertiary"><ion-icon name="arrow-round-back"></ion-icon></ion-button>
+    <ion-title text-center>Sum-Quiz-avatar</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+<ion-grid class="avatar-container">
+  <ion-row>
+    <ion-col>
+      <!--Slider-->
+    <ion-slides pager="true" [options]="sliderConfig" #slider  >
+      <ion-slide class="slider-content" *ngFor="let item of imgData" >
+             <img id="{{ 'img' + item.id }}" [src]="item.url" (click)="getIndex(item.id)">
+            </ion-slide>
+        </ion-slides>
+       </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-title text-center>Select one avatar</ion-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

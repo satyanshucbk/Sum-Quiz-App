@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-buttons float-left (click)="goBackStart()" color="tertiary"><ion-icon slot="icon-only" name="arrow-back"></ion-icon></ion-buttons>
+      <ion-title  text-center>Sum-Quiz-Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid class="form-container">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <form [formGroup]="loginForm"> 
+            <ion-card color="tertiary">
+                <ion-card-header>
+                    <ion-card-title text-center>Login Here! </ion-card-title>
+                </ion-card-header>
+                  <ion-card-content>
+                  
+                    <ion-item color="dark">
+                          <div class="form-group">
+                              <ion-input type="email" formControlName="email" placeholder="someone@mail.com" class="form-control" ></ion-input>
+                           </div>
+                      </ion-item>
+  <!-- Error Message for email-->
+                    <div class="error-messages">
+                      <ng-container *ngFor="let error of error_message.email">
+                             <div class="error-message" *ngIf="loginForm.get('email').hasError(error.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                                {{ error.message }}
+                             </div>
+                      </ng-container>
+                  </div>
+
+                  <ion-item color="dark">
+                      <div class="form-group">
+                          <ion-input type="password" formControlName="password" placeholder="Choose your password" class="form-control"  ></ion-input>
+                      </div> 
+                  </ion-item> 
+ 
+<!-- Error Message for email-->
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_message.password">
+                      <div class="error-message" *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                        {{ error.message }}
+                      </div>
+                    </ng-container>
+                </div>
+             </ion-card-content>
+           </ion-card>
+           <div class="form-group" text-center>
+              <ion-button (click)="login()" text-center [disabled]="!loginForm.valid" color="tertiary" expand="block" shape="round"><ion-icon name="log-in"></ion-icon>Login</ion-button>
+          </div>
+          <div class="redirect-login" text-center>
+            <h5 class="redirect-text" text-center>Don't have an account? <ion-button (click)="signup()" color="tertiary">Sign up</ion-button></h5>
+          </div>
+      </form>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

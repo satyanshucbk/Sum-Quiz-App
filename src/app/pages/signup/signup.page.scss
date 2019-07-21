@@ -1,0 +1,30 @@
+ion-title{
+    color: #ffffff;
+}
+
+.form-container{
+   
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+ion-card{
+    padding-bottom: 25px;
+}
+
+.error-messages {
+    font-size: 1em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.redirect-text{
+    font-size: 1em;
+    color: #ffffff;
+}

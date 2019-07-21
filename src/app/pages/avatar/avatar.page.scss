@@ -1,0 +1,60 @@
+
+.avatar-container{
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    // position: relative;
+    // top: 50%;
+    // transform: translateY(-50%);
+}
+
+img{
+    border-radius: 50%;
+}
+#img1{
+    height: 120px;
+    width: 120px;
+    background-color: #b3ffff;
+    border: 4px solid #00cccc;
+}
+#img2{
+    height: 130px;
+    width: 130px;
+    background-color: #e4ffa3;
+    border: 4px solid #16db01;
+}
+#img3{
+    height: 140px;
+    width: 140px;
+    background-color: #ffffff;
+    border: 4px solid #fff285;
+}
+#img4{
+    height: 150px;
+    width: 150px;
+    background-color: #ffeb36;
+    border: 4px solid #ff0703;
+}
+#img5{
+    height: 140px;
+    width: 140px;
+    background-color: #ffb3ff;
+    border: 4px solid #e600e6;
+}
+#img6{
+    height: 130px;
+    width: 130px;
+    background-color: #80b3ff;
+    border: 4px solid#005ce6;
+}
+#img7{
+    height: 120px;
+    width: 120px;
+    background-color: #fff;
+    border: 4px solid #e63900;
+}
+
+ion-title{
+    color: #ffffff;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Sum-Quiz-App",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
