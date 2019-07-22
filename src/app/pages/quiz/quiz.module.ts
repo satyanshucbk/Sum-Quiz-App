@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { QuizPage } from './quiz.page';
-
+import { HighlightDirective } from '../../directives/highlight.directive';
 const routes: Routes = [
   {
     path: '',
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [QuizPage]
+  declarations: [QuizPage,HighlightDirective]
 })
 export class QuizPageModule {}
