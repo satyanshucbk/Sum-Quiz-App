@@ -14,20 +14,28 @@ constructor() { }
       qusSubTitle: 80 + '+' + 10,
       option: [
         {
+          optionId: 1,
           optionText: 110,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 2,
           optionText: 90,
-          isRight: true
+          isRight: true,
+          selected: false
         },
         {
+          optionId: 3,
           optionText: 100,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 4,
           optionText: 120,
-          isRight: false
+          isRight: false,
+          selected: false
         }
       ]
   },
@@ -37,20 +45,28 @@ constructor() { }
       qusSubTitle: 34 + '-' + 22,
       option: [
         {
+          optionId: 1,
           optionText: 12,
-          isRight: true
+          isRight: true,
+          selected: false
         },
         {
+          optionId: 2,
           optionText: 46,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 3,
           optionText: 10,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 4,
           optionText: 15,
-          isRight: false
+          isRight: false,
+          selected: false
         }
       ]
   },
@@ -60,20 +76,28 @@ constructor() { }
       qusSubTitle: 25 + '*' + 5,
       option: [
         {
+          optionId: 1,
           optionText: 102,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 2,
           optionText: 116,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 3,
           optionText: 115,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 4,
           optionText: 125,
-          isRight: true
+          isRight: true,
+          selected: false
         }
       ]
   },
@@ -83,20 +107,28 @@ constructor() { }
       qusSubTitle: 40 + '/' + 8,
       option: [
         {
+          optionId: 1,
           optionText: 8,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 2,
           optionText: 5,
-          isRight: true
+          isRight: true,
+          selected: false
         },
         {
+          optionId: 3,
           optionText: 10,
-          isRight: false
+          isRight: false,
+          selected: false
         },
         {
+          optionId: 4,
           optionText: 6,
-          isRight: false
+          isRight: false,
+          selected: false
         }
       ]
   },
@@ -106,20 +138,28 @@ constructor() { }
     qusSubTitle: 77 + '+' + 13,
     option: [
       {
+        optionId: 1,
         optionText: 90,
-        isRight: true
+        isRight: true,
+        selected: false
       },
       {
+        optionId: 2,
         optionText: 107,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 3,
         optionText: 89,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 4,
         optionText: 85,
-        isRight: false
+        isRight: false,
+        selected: false
       }
     ]
   },
@@ -129,20 +169,28 @@ constructor() { }
     qusSubTitle: 56 + '-' + 27,
     option: [
       {
+        optionId: 1,
         optionText: 17,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 2,
         optionText: 32,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 3,
         optionText: 29,
-        isRight: true
+        isRight: true,
+        selected: false
       },
       {
+        optionId: 4,
         optionText: 43,
-        isRight: false
+        isRight: false,
+        selected: false
       }
     ]
   },
@@ -152,20 +200,28 @@ constructor() { }
     qusSubTitle: 45 + '*' + 5,
     option: [
       {
+        optionId: 1,
         optionText: 205,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 2,
         optionText: 216,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 3,
         optionText: 245,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 4,
         optionText: 225,
-        isRight: true
+        isRight: true,
+        selected: false
       }
     ]
 },
@@ -175,20 +231,28 @@ constructor() { }
     qusSubTitle: 85 + '/' + 5,
     option: [
       {
+        optionId: 1,
         optionText: 28,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 2,
         optionText: 17,
-        isRight: true
+        isRight: true,
+        selected: false
       },
       {
+        optionId: 3,
         optionText: 15,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 4,
         optionText: 16,
-        isRight: false
+        isRight: false,
+        selected: false
       }
     ]
 },
@@ -198,20 +262,28 @@ constructor() { }
   qusSubTitle: 182 + '+' + 301,
   option: [
     {
+      optionId: 1,
       optionText: 483,
-      isRight: true
+      isRight: true,
+      selected: false
     },
     {
+      optionId: 2,
       optionText: 465,
-      isRight: false
+      isRight: false,
+      selected: false
     },
     {
+      optionId: 3,
       optionText: 498,
-      isRight: false
+      isRight: false,
+      selected: false
     },
     {
+      optionId: 4,
       optionText: 504,
-      isRight: false
+      isRight: false,
+      selected: false
     }
   ]
 },
@@ -221,20 +293,28 @@ constructor() { }
     qusSubTitle: 162 + '/' + 9,
     option: [
       {
+        optionId: 1,
         optionText: 8,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 2,
         optionText: 17,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 3,
         optionText: 22,
-        isRight: false
+        isRight: false,
+        selected: false
       },
       {
+        optionId: 4,
         optionText: 18,
-        isRight: true
+        isRight: true,
+        selected: false
       }]
 }];
 

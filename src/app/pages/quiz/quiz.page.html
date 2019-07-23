@@ -20,8 +20,12 @@
               </div>   
           </ion-card-header>
           <ion-card-content>
-            <div class="qus-option">
-              <button class="btn-options" appHighlight [isCorrectOption] = "option.isRight" *ngFor="let option of quesData.option">{{option.optionText}}</button>
+            <div class="qus-option" >
+              <button class="btn-options" 
+              appHighlight [isCorrectOption] = "option.isRight" [disabled] = "option.selected"
+              *ngFor="let option of quesData.option" (click)="selectOption(quesData,option.optionText)">
+              {{option.optionText}}
+            </button>
              </div>
 
           <ion-button color="tertiary" float-left  (click)="getPreviousQuestion(quesData.qid)" *ngIf="quesData.qid!=1">BACK</ion-button>

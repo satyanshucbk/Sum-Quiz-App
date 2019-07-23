@@ -17,6 +17,6 @@ export class HighlightDirective {
     }else{
       this.el.nativeElement.style.backgroundColor = "red";
     }
-    console.log(this.isCorrectOption);
+   // console.log(this.isCorrectOption);
   }
 }

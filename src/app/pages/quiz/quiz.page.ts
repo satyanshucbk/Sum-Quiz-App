@@ -13,7 +13,7 @@ import {HighlightDirective} from '../../directives/highlight.directive';
 export class QuizPage implements OnInit {
 
  private quesData: any;
-
+ userAnswer : any = {};
  goBackAvatar() {
   this.router.navigate(['avatar']);
 }
@@ -51,6 +51,16 @@ export class QuizPage implements OnInit {
         loading.dismiss();
       }, 1000);
     }
-
+    selectOption(data,selectedOption){
+   
+      data.option.forEach((optn)=>{
+        optn.selected = true;
+      });
+      this.quesData = data;
+      let id = this.quesData.qid;
+      this.userAnswer[id] = selectedOption;
+      localStorage.setItem('userAnswer',JSON.stringify(this.userAnswer));
+     // console.log(JSON.parse(localStorage.getItem('userAnswer')));
+    }
   }
 
