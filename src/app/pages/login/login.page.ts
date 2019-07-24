@@ -11,7 +11,7 @@ import { LoadingController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
   loginForm: FormGroup;
-  userData: any;
+  loginData: any;
 
 
   error_message = {
@@ -64,13 +64,13 @@ export class LoginPage implements OnInit {
 
   async login(){
 
-    this.userData = {
+    this.loginData = {
       'email': this.loginForm.value.email,
       'password': this.loginForm.value.password
     }
 
-    localStorage.setItem("userData", JSON.stringify(this.userData));
-    console.log(JSON.parse(localStorage.getItem("userData")));
+    localStorage.setItem("loginData", JSON.stringify(this.loginData));
+    console.log(JSON.parse(localStorage.getItem("loginData")));
   
     /***Alert Message***/
     // const alert = await this.alertController.create({
@@ -90,7 +90,7 @@ export class LoginPage implements OnInit {
     // let result = await alert.onDidDismiss;
     // console.log(this.userData);
 
-    if (this.userData.email && this.userData.password){
+    if (this.loginData.email && this.loginData.password){
       this.router.navigate(['avatar']);
       // this.userData({email: '', password: ''}); 
     }

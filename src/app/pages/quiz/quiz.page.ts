@@ -1,9 +1,8 @@
-import { Component, OnInit,ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 
 import { QuestionsService } from '../../services/questions.service';
-import {HighlightDirective} from '../../directives/highlight.directive';
 
 @Component({
   selector: 'app-quiz',
@@ -13,7 +12,8 @@ import {HighlightDirective} from '../../directives/highlight.directive';
 export class QuizPage implements OnInit {
 
  private quesData: any;
- userAnswer : any = {};
+ userAnswer: any = {};
+
  goBackAvatar() {
   this.router.navigate(['avatar']);
 }
@@ -27,9 +27,10 @@ export class QuizPage implements OnInit {
   ngOnInit() {
     this.quesData = this.questionsservice.getQuestions(0);
   }
-
+/*--Get Next Question--*/
   async getNextQuestion(id) {
-    this.quesData = this.questionsservice.getQuestionById(id+1);
+    this.quesData = this.questionsservice.getQuestionById(id + 1);
+
 /*-Loader-*/
     const loading = await this.loadingcontroller.create ({
           message: 'Loading...'
@@ -39,10 +40,11 @@ export class QuizPage implements OnInit {
             loading.dismiss();
           }, 1000);
   }
-  
+/*--GetPrevious Question--*/
   async getPreviousQuestion(id) {
-    this.quesData = this.questionsservice.getQuestionById(id-1);
-    /*-Loader-*/
+    this.quesData = this.questionsservice.getQuestionById(id - 1);
+
+/*-Loader-*/
     const loading = await this.loadingcontroller.create ({
       message: 'Loading...'
     });
@@ -51,16 +53,19 @@ export class QuizPage implements OnInit {
         loading.dismiss();
       }, 1000);
     }
-    selectOption(data,selectedOption){
-   
-      data.option.forEach((optn)=>{
+/*--Submit Function--*/
+    getSubmit() {
+      this.router.navigate(['result']);
+    }
+/*--Select Option--*/
+    selectOption(data, selectedOption){
+      data.option.forEach((optn) => {
         optn.selected = true;
       });
       this.quesData = data;
       let id = this.quesData.qid;
       this.userAnswer[id] = selectedOption;
-      localStorage.setItem('userAnswer',JSON.stringify(this.userAnswer));
-     // console.log(JSON.parse(localStorage.getItem('userAnswer')));
+      localStorage.setItem('userAnswer', JSON.stringify(this.userAnswer));
+      console.log(JSON.parse(localStorage.getItem('userAnswer')));
     }
   }
-

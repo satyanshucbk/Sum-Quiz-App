@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+      <ion-button slot="start" (click)="goBackQuiz()" color="tertiary"><ion-icon slot="icon-only" name="arrow-back"></ion-icon></ion-button>
+    <ion-title text-center>Quiz-App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="result-container" padding>
+    <ion-row>
+      <ion-col size-md="8" offset-md="2">
+          <div text-center class="user-profile" >
+            <img [src]="imgUrl">
+          </div>
+          <div class="user-name" padding>
+            <ion-title text-center>{{userFullName}}</ion-title>
+          </div>
+          <div text-center padding>
+            <div class="ribbon"><span class="ribbon-text">Your Score</span></div>
+          </div>
+          <div class="user-scored" padding>
+            <ion-title class="scored" text-center>{{score}}/10</ion-title>
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
