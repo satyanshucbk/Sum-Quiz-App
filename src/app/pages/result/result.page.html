@@ -1,6 +1,5 @@
 <ion-header>
   <ion-toolbar color="tertiary">
-      <ion-button slot="start" (click)="goBackQuiz()" color="tertiary"><ion-icon slot="icon-only" name="arrow-back"></ion-icon></ion-button>
     <ion-title text-center>Quiz-App</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -8,20 +7,49 @@
 <ion-content>
   <ion-grid class="result-container" padding>
     <ion-row>
-      <ion-col size-md="8" offset-md="2">
+      <ion-col >
           <div text-center class="user-profile" >
-            <img [src]="imgUrl">
+            <img class="profile-image" [src]="imgUrl">
           </div>
-          <div class="user-name" padding>
-            <ion-title text-center>{{userFullName}}</ion-title>
-          </div>
-          <div text-center padding>
-            <div class="ribbon"><span class="ribbon-text">Your Score</span></div>
-          </div>
-          <div class="user-scored" padding>
-            <ion-title class="scored" text-center>{{score}}/10</ion-title>
-          </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+          
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-md="8" offset-md="2">
+            <div class="user-name" padding>
+                <ion-title padding class="fullname" text-center>{{userFullName}}</ion-title>
+            </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size-md="8" offset-md="2">
+              <div text-center padding>
+                  <div padding class="ribbon"><span class="ribbon-text">Your Score</span></div>
+                </div>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size-md="8" offset-md="2">
+              <div class="user-scored" padding>
+                  <ion-title class="scored" text-center>{{score}}/10</ion-title>
+              </div>
+          </ion-col>
+      </ion-row>
+              <div text-center padding >
+                  <ion-button text-center color="tertiary" (click)="backToStart()">Play Again</ion-button>
+              </div>
+</ion-grid>
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="tertiary">
+        <ion-icon name="share"></ion-icon>
+      </ion-fab-button>
+
+      <ion-fab-list side="top">
+        <ion-fab-button color="tertiary" href="https://www.facebook.com/login/"><ion-icon name="logo-facebook" ></ion-icon></ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="start">
+        <ion-fab-button color="tertiary" href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+
+    </ion-fab>
 </ion-content>

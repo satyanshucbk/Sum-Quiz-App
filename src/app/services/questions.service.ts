@@ -326,4 +326,5 @@ getQuestions(index) {
   const  index =  this.qusData.findIndex((question) => question.qid === id);
   return this.qusData[index];
  }
+ 
 }

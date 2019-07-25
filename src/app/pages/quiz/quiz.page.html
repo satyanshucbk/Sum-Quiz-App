@@ -6,9 +6,9 @@
 </ion-header>
 
 <ion-content>
-  <ion-grid padding>
+  <ion-grid class="quiz-container" padding>
     <ion-row>
-      <ion-col size-md="8"  offset-md="2">
+      <ion-col size-md="8"  offset-md="2" >
         <ion-card text-center color="tertiary">
         <ion-card-header >
               <div padding class="qus-title">
@@ -20,8 +20,9 @@
           </ion-card-header>
           <ion-card-content>
             <div class="qus-option">
-              <button ion-button  class="btn-options" [disabled]="option.selected" appHighlight [isCorrectOption] = "option.isRight" 
-               *ngFor="let option of quesData.option" (click)="selectOption(quesData,option.isRight)">
+              <button ion-button  class="btn-options" [disabled]="option.selected"
+               appHighlight [isCorrectOption] = "option.isRight" #optionBtn attr.id="btn_{{option.optionId}}_{{quesData.qid-1}}"
+               *ngFor="let option of quesData.option" (click)="selectOption(quesData,option.isRight,option.optionId)" >
                {{option.optionText}}
               </button>
             </div>

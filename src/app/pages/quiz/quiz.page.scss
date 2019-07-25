@@ -4,17 +4,19 @@
 }
 
 .quiz-container{
-    // justify-content: center;
-    // justify-items: center;
-    // align-content: center;
-    // align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
 
-
+.success{
+    background-color: green;
+}
 .btn-options{
     height: 5em;
     width: 5em;

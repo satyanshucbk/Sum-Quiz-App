@@ -12,6 +12,8 @@ export class HighlightDirective {
   }
 
   private highlight() {
+    console.log("directive clicked")
+    //console.log(this.isCorrectOption)
     if(this.isCorrectOption){
       this.el.nativeElement.style.backgroundColor = "green";
     }else{

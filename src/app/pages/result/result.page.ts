@@ -10,10 +10,7 @@ export class ResultPage implements OnInit {
   imgUrl: string;
   userFullName: string;
   userData: any;
-  score : number;
-  goBackQuiz() {
-     this.router.navigate(['quiz']);
-  }
+  score: number;
 
   constructor(public router: Router) { }
 
@@ -22,18 +19,22 @@ export class ResultPage implements OnInit {
     this.userData = JSON.parse(localStorage.getItem('userData'));
     this.userFullName = this.userData.firstName + ' ' + this.userData.lastname;
     this.calculateScore();
-  }
+ }
 
-  calculateScore(){
-    let userAnswer = JSON.parse(localStorage.getItem('userAnswer'));
-    let count = 0;
-    for(let index in userAnswer){
-      if(userAnswer[index]){
-        count++;
-      }
-      
+ calculateScore() {
+  let userAnswer = JSON.parse(localStorage.getItem('userAnswer'));
+  let count = 0;
+  for (let index in userAnswer) {
+    if (userAnswer[index]) {
+      count++;
     }
-    console.log(userAnswer);
-    this.score = count;
   }
+ // console.log(userAnswer);
+  this.score = count;
+}
+
+backToStart() {
+  localStorage.removeItem('userAnswer');
+  this.router.navigate(['quiz']);
+}
 }
